@@ -1,16 +1,49 @@
 /* common start */
+
+.submit_btn{
+    background-color: var(--df-green-c);
+}
+.form_box .input_box:has(input:focus) .input_tit{
+    color: var(--m-main-c);
+}
+.form_box .input_box input:focus{
+    outline: var(--m-main-c);
+    border-color: var(--m-main-c);;
+}
+.bg_color{
+    background-color: var(--m-c-03);
+}
+.find_box p span.id{
+    color:var(--m-main-c)
+}
+.count_txt{
+    color: var(--m-main-c);
+}
+.count_txt button{
+    color: var(--m-c-04);
+    border-color: var(--m-c-04);
+}
+.input_box .info_txt.error {
+    color: var(--m-c-04);
+}
 /* common end */
 
 /* main start */
 #main_bn {
     background-color: var(--m-c-03);
-    padding-top: 107px;
+    padding-top: 60px;
 }
 
 #main_bn .title {
     position: relative;
 }
-
+#main_bn .title img{
+    position: absolute;
+    top: 0;
+    
+    left: 50%;
+    transform: translate(-50%,calc(-100% + 7px));
+}
 #main_bn .title span {
     font-family: 'jn';
     font-size: 22px;
@@ -28,24 +61,33 @@
 #main_bn .main_bn_links {
     border-top: 1px solid var(--m-main-c);
     border-bottom: 1px solid var(--m-main-c);
-    padding: 30px 0;
+    padding: 30px 2%;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 18px;
 }
-
+#main_bn .main_bn_links li{
+    max-width: 120px;
+    width: 25%;
+}
+#main_bn .main_bn_links li a{
+    display: block;
+}
 #main_bn .main_bn_links li a .img {
     display: inline-block;
-    width: 120px;
-    height: 120px;
+  
+    width: 100%;
+    height:100%;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     background-color: #fff;
     position: relative;
     padding: 10px;
     box-sizing: border-box;
     position: relative;
-    padding: 25px;
+    padding:20%;
 }
 
 #main_bn .main_bn_links li a .img img {
@@ -56,13 +98,14 @@
 
 #main_bn .main_bn_links li a .txt {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
     line-height: 1.3;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    letter-spacing: -0.5px;
 }
 
 /* main end */
@@ -111,3 +154,12 @@
     margin-top: 10px
 }
 /* sec_3 end */
+
+
+/* .login page start */
+.sub_top_bn{
+    background-color: var(--m-c-03);
+    color: var(--m-main-c);
+}
+
+/* .login page end */

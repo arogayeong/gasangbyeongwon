@@ -5,17 +5,22 @@
     align-items: center;
     flex-direction: column;
     padding-top: 70px;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .main_btn_boxs{
-    margin-top: 94px;
+    margin-top: 80px;
     max-width: 290px;
     width: 100%;
 }
 .main_btn_box{
+    position: relative;
   
-    border-radius: 20px 20px 0 20px;
-    height: 80px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+.main_btn_box .img{
+    top: 15px;
+    position: relative;
 }
 .main_btn_box button{
     width: 100%;
@@ -31,11 +36,14 @@
     font-weight: 600;
     font-size: 1.1rem;
 
+    border-radius: 20px 20px 0 20px;
+    height: 80px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+
 }
-.main_btn_box.mom{
+.main_btn_box.mom button{
     background-color: var(--m-c-01);
 }
-.main_btn_box.doc{
-    margin-top: 40px;
+.main_btn_box.doc button{
     background-color: var(--d-c-01);
 }
