@@ -26,6 +26,24 @@
 .input_box .info_txt.error {
     color: var(--m-c-04);
 }
+.df_input.calendar{
+    background-image: url('../images/mom/bx_calendar.png');
+}
+.ui-datepicker th{
+    background-color: var(--m-main-c) !important;
+}
+.ui-datepicker .ui-datepicker-header{
+    background-color: var(--m-main-c) !important;
+}
+.ui-datepicker-current-day .ui-state-default.ui-state-active{
+    background-color: var(--m-main-c) !important;
+}
+.join_progress .bar{
+    background-color: var(--m-main-c);
+}
+.form_box .required .input_tit::before{
+    color: var(--m-main-c);
+}
 /* common end */
 
 /* main start */
@@ -119,11 +137,7 @@
     width: 40%;
 }
 /* sec_2 end */
-/* sec_3 start */
-#sec_3 .lt_list_2:not(:last-child){
-    margin-bottom: 20px;
-}
-/* sec_3 end */
+
 /* sec_4 start */
 #sec_4{
     background-color: #EFF9FF;
@@ -163,3 +177,7 @@
 }
 
 /* .login page end */
+
+.sub_top_bn .my_bg{
+    margin-right: 20px;
+}

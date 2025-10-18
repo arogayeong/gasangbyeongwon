@@ -13,15 +13,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- swiper end-->
-    <title>로그인</title>
+    <title>2 로그인/회원가입 15</title>
 </head>
 <body>
-    <div class="layout">
+    <div class="layout bg_color">
         <!-- header start -->
-        <header id="hd">
-            <a href="#n" id="logo">
-                <img src="../../images/mom/logo.png">
-            </a>
+        <header id="hd" class="sub_hd">
+            <button type="button" id="back_btn"><img src="../../images/common/hd_back_arrow.png" alt=""></button>
+            <span class="hd_title">회원가입</span>
             <button type="button" id="m_menu">
                 <i></i>
                 <i></i>
@@ -83,23 +82,27 @@
         </div>
         <!-- header end -->
         <!-- content start -->
-        <div class="sub_top_bn">
-            <span class="title">로그인</span>
-            <img src="../../images/mom/login_bn_bg.png" alt="" class="bg my_bg" >
-        </div>
-        <div class="sub_con">
-            <div class="login_box">
-                <form action="" >
-                    <input type="text" class="df_input" placeholder="아이디">
-                    <input type="password" class="df_input" placeholder="비밀번호">
-                    <button type="submit" class="submit_btn">로그인</button>
-                </form>
-                <div class="login_info_box">
-                    <a href="#n">회원가입</a>
-                    <span></span>
-                    <a href="#n">아이디 찾기</a>
-                    <span></span>
-                    <a href="#n">비밀번호 찾기</a>
+      
+        <div class="find_result_layer">
+            <div class="sub_top_bn ">
+                <img src="../../images/mom/ok-ico.png" alt="" class="ico">
+                <span class="title">회원가입 <br> 완료</span>
+                <img src="../../images/mom/login_bn_bg.png" alt="" class="bg">
+            </div>
+            <div class="find_result">
+                <div class="find_box">
+                    <p>
+                        회원가입이 완료되었습니다. <br>
+                        <span class="point">김산모</span> 회원님은 현재 <br>
+                        <span class="point">임신 10주차</span> 입니다.
+                    </p>
+                    <p class="sub_p">
+                        엄마아기에서 출산에 필요한 <br>
+                        유용한 정보들을 준비했어요!
+                    </p>
+                </div>
+                <div class="find_btns column">
+                    <a href="#n">홈페이지로</a>
                 </div>
             </div>
         </div>
@@ -110,6 +113,7 @@
         </div>
         <!-- fix_bot end -->
     </div>
+
 
     <script>
         // swiper script
