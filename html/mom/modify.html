@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- swiper end-->
-    <title>44 산모 마이페이지 2</title>
+    <title>4산모 마이페이지 2</title>
 </head>
 
 <body>
@@ -143,10 +143,6 @@
                                 <span class="count">3:00</span>
                                 <button type="button">인증번호가 전송되지 않았나요?</button>
                             </div>
-                            <!-- 인증번호 미기재 -->
-                            <button type="button" class="df_btn dis">인증번호 전송</button>
-                            <!-- 인증번호 기재 / 인증번호 전송 후 이메일 input readonly -->
-                            <button type="button" class="df_btn act">인증번호 전송</button>
                             <!-- 이메일 변경 -->
                             <button type="button" class="df_btn act">이메일 수정</button>
                         </div>
@@ -186,8 +182,13 @@
                                 <input type="text" class="df_input calendar" required value="2025.12.14">
                             </label>
                         </div>
-                        <!-- 필수 값 전부 작성하면 disabled 삭제 -->
-                        <button type="submit" class="submit_btn" disabled>가입</button>
+                        <div class="input_box">
+                            <label class="required">
+                                <p class="input_tit">임신 주수</p>
+                                <input type="text" class="df_input "  required >
+                            </label>
+                        </div> 
+                        <button type="submit" class="submit_btn" >수정완료</button>
                     </form>
                 </div>
             </div>

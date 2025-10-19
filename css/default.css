@@ -449,6 +449,7 @@ body:has(.m_menu_layer.open){
     top: 0;
     height: 100%;
     width: 100%;
+    z-index: 99999;
 }
 .modal_con{
     position: absolute;
@@ -485,18 +486,21 @@ body:has(.m_menu_layer.open){
     gap: 40px;
     align-items: center;
 }
-.radio{
+.radio,
+.chk{
     display: flex;
     gap: 10px;
     align-items: center;
     cursor: pointer;
 }
-.radio input{
+.radio input,
+.chk input{
     position: absolute;
     width: 0;
     height: 0;
     left: 0;
     top: 0;
+    visibility: hidden;
 }
 .radio i{
     width: 28px;
@@ -506,11 +510,20 @@ body:has(.m_menu_layer.open){
     position: relative;
     display: inline-block;
 }
-.radio input:checked ~ i {
+.chk i{
+    width: 23px;
+    height: 23px;
+    border: 1px solid #949494;
+    position: relative;
+    display: inline-block;
+}
+.radio input:checked ~ i ,
+.chk input:checked ~ i {
     background-color: #393939;
     border-color: #393939;
 }
-.radio input:checked ~ i::after{
+.radio input:checked ~ i::after,
+.chk input:checked ~ i::after{
     content: "";
     display: block;
     position: absolute;
@@ -521,7 +534,8 @@ body:has(.m_menu_layer.open){
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.radio span{
+.radio,
+.chk span{
     font-weight: 500;
     font-size: 16px;
 }
@@ -555,6 +569,7 @@ body:has(.m_menu_layer.open){
     display: block;
     border-radius: 50px;;
     color: #fff;
+    line-height: 50px;
     background-color: var(--df-gray-dis);
 }
 .df_btn.dis{
@@ -562,6 +577,12 @@ body:has(.m_menu_layer.open){
 }
 .df_btn.act{
     background-color: var(--df-gray-act);
+}
+
+.df_btn.list{
+    font-family: 'jn';
+
+    background-color: var(--df-f-c-03);
 }
 .submit_btn{
     font-family: 'jn';
@@ -596,7 +617,11 @@ body:has(.m_menu_layer.open){
     font-weight: 500;
     font-size: 15px;
     background-color: #393939;
-    
+    padding: 0 10px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .form_box .input_box:last-child{
     margin-bottom: 30px;
@@ -945,3 +970,400 @@ ui-state-hover,
     font-size: 16px;
 }
 /* mypage end */
+
+/* list start */
+
+.paging{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.paging strong,
+.paging a:not(.arrow){
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+}
+.paging strong span,
+.paging a span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+}
+.paging a:not(.arrow){
+    color: #949494;
+    border: 1px solid #949494;
+}
+.paging strong{
+    color: #fff;
+    background-color: #393939;
+}
+.paging .next,
+.paging .first,
+.paging .prev,
+.paging .last{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+.paging .next{
+    background-image: url('../images/common/next-ico.png');
+}
+.paging .prev{
+    background-image: url('../images/common/prev-ico.png');
+}
+.paging .first{
+    background-image: url('../images/common/first-ico.png');
+}
+.paging .last{
+    background-image: url('../images/common/last-ico.png');
+}
+
+.list_tab{
+    display: flex;
+    padding: 0 10px;
+    overflow: hidden;
+}
+.list_tab.no_slide button{
+    flex: 1;
+}
+.list_tab button{
+    padding: 0 10px;
+    width: 25%;
+    white-space: nowrap;
+    height: 50px;
+}
+.list_tab button.active{
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+
+}
+.list_box .sch_box{
+    display: flex;
+    background-color: #f5f5f5;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+}
+.list_box .sch_box select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border: 1px solid #d9d9d9;
+    height: 40px;
+    border-radius: 50px;
+    min-width: 120px ;
+    padding: 0 16px;
+    font-weight: 500;
+
+    background-image: url('../images/common/select-arrow.png');
+    background-repeat: no-repeat;
+    background-position: 85% center;
+    cursor: pointer;
+}
+
+.list_box .sch_box .sch_input{
+    position: relative;
+    flex: 1;
+
+}
+.list_box .sch_box .sch_input button{
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: #949494;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.list_box .sch_box .sch_input button img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.list_box .sch_box .sch_input input{
+    height: 40px;
+    font-weight: 500;
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 1px solid #d9d9d9;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+.list_box .sch_box .sch_input input::placeholder{
+    color: #949494;
+}
+
+.list_1{
+    padding: 20px;
+}
+.list_1_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list_1_top .list_1_top_r{
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.list_1_top .list_1_top_r span{
+    font-weight: 500;
+    font-size: 15px;
+    color: #949494;
+}
+.list_1_top .list_1_top_r .del_btn{
+    font-weight: 500;
+    color: #fff;
+    font-size: 15px;
+    background-color: #949494;
+    border-radius: 30px;
+    height: 30px;
+    padding: 0 10px;
+}
+.list_1 ul{
+    margin-top: 12px;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+.list_1 li{
+    border-top: 1px solid #d9d9d9;
+}
+.list_1 li:first-child{
+    border-top: 0;
+}
+.list_1 li a{
+    padding: 16px 0;
+    display: flex;
+    align-items: start;
+    gap: 16px;
+}
+.list_1 li a .list_1_txt{
+    flex: 1;
+    overflow: hidden;
+}
+.list_1 li a .list_1_li_top{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.list_1 li a .list_1_li_top .cate{
+    padding: 4px 10px;
+    display: inline-block;
+    background-color: #BDBDBD;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 500;
+    color: #Fff;
+    height: 25px;
+    line-height: 25px;
+}
+.list_1 li a .list_1_li_top .cate.stay{
+    background-color: var(--df-purple-c);
+}
+.list_1 li a .list_1_li_top .date{
+    font-size: 14px;
+}
+.list_1 li a .list_1_li_top .reply{
+    display: flex;
+    gap: 4px;
+    font-size: 14px;
+    color: #7E7D7D;
+    align-items: center;
+}
+.list_1 li a .tit{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    font-weight: 500;
+}
+.list_1 .submit_btn{
+    margin-top: 60px;
+}
+
+.view_1 .view_1_top{
+    padding: 16px 20px 6px;
+    border-bottom: 10px solid #F5F5F5;
+}
+.view_1 .view_1_top .tit{
+    padding-bottom: 14px;
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #D9D9D9;
+    justify-content: space-between;
+    position: relative;
+}
+.view_1 .view_1_top .tit .more{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.view_1 .view_1_top .tit .more_box{
+    border: 1px solid #d9d9d9;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(90%);
+    display: none;
+}
+.view_1 .view_1_top .tit .more_box button{
+    display: block;
+    font-weight: 500;
+    padding: 4px 10px;
+    background-color: #fff;
+
+}
+.view_1 .view_1_top .tit .more_box button:first-child{
+    border-bottom: 1px solid #d9d9d9;
+}
+.view_1 .view_1_top .tit .more i{
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: #949494;
+    border-radius: 50%;
+}
+.view_1 .view_1_top .tit p{
+    word-break: keep-all;
+}
+.view_1 .view_1_top .date{
+    padding: 15px 0 10px;
+    color:#7E7D7D;
+    font-weight: 500;
+    font-size: 15px;
+}
+.view_1 .view_1_con{
+    padding: 0 20px  50px;
+}
+.view_1 .view_1_con .df_btn.list{
+    margin-top: 20px;
+}
+.view_1 .view_1_con .view_1_q{
+    padding: 20px 10px;
+ 
+}
+.view_1 .view_1_con .view_1_q .txt{
+    white-space: pre-line;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+.view_1 .view_1_con .view_1_a .a_tit{
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 8px 25px ;
+    position: relative;
+}
+.view_1 .view_1_con .view_1_a .a_tit i{
+    background-color: var(--df-purple-c);
+    width: 12px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.view_1 .view_1_con .view_1_a .a_tit span{
+    font-weight: 500;
+}
+.view_1 .view_1_con .view_1_a .a_txt_box{
+    padding: 20px 10px;
+}
+.view_1 .view_1_con .view_1_a .a_writer{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.view_1 .view_1_con .view_1_a .a_writer p{
+    font-weight: 500;
+}
+.view_1 .view_1_con .view_1_a .txt{
+    white-space: pre-line;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.list_2{
+    padding: 20px 20px 50px;
+}
+.list_2>ul>li{
+    border: 1px solid #F5F5F5;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+    padding: 15px 15px 20px;
+}
+.list_2>ul>li:last-child{
+    margin-bottom: 0;
+}
+.list_2>ul>li .list_2_top{
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.list_2>ul>li .list_2_top .no{
+    font-weight: 600;
+    color: #7E7D7D;
+}
+.list_2>ul>li .list_2_top .tit{
+    font-weight: 500;
+
+}.list_2>ul>li .list_2_con{
+    margin-top: 15px;
+}
+.list_2>ul>li .list_2_con ul li{
+    display: flex;
+    align-items: start;
+    gap: 16px;
+    margin-bottom: 15px;
+}
+.list_2>ul>li .list_2_con ul li:last-child{
+    margin-bottom: 0;
+}
+.list_2>ul>li .list_2_con ul li .txt{
+    flex: 1;
+}
+.list_2>ul>li .list_2_con ul li span{
+    background-color: var(--df-f-c-02);
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    width: 60px;
+    text-align: center;
+    line-height: 25px;
+}
+.list_2>ul>li .list_2_con ul li p{
+    word-break: keep-all;
+    font-size: 15px;
+    line-height: 1.3;
+}
+.list_2>ul>li .list_2_con ul li .target p{
+    position: relative;
+    padding-left: 10px;
+}
+.list_2>ul>li .list_2_con ul li .target p::before{
+    content: "-";
+    left: 0;
+    top: 1px;
+    line-height: 1;
+    position: absolute;
+}
+/* list end */
