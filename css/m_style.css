@@ -52,6 +52,14 @@
     background-color: var(--m-c-03);
     color: var(--m-c-02);
 }
+.view_comm_box .count span{
+    color: var(--m-main-c);
+}
+.float_nav a.active{
+    color:var(--m-c-02);
+    border-color: var(--m-main-c);
+}
+
 /* common end */
 
 /* main start */

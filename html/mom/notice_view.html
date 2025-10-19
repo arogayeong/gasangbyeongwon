@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- swiper end-->
-    <title>6 산모 아기와만나기 - 임산부 기본 정보 1</title>
+    <title>10 산모 소통센터 2</title>
 </head>
 
 <body>
-    <div class="layout ">
+    <div class="layout gray_bg">
         <!-- header start -->
         <header id="hd">
             <a href="#n" id="logo">
@@ -86,12 +86,25 @@
         </div>
         <!-- header end -->
         <!-- content start -->
-        <div class="sub_top_bn">
-            <span class="title">아기와 만나기</span>
-            <img src="../../images/mom/meet-baby-bg.png" alt="" class="bg ">
+     
+        <div class="sub_con_hd">
+            <button type="button" id="back_btn"><img src="../../images/common/hd_back_arrow.png" alt=""></button>
+            <span class="title">공지사항</span>
         </div>
-        <div>
-            메뉴 디자인 논의.. 
+        <div class="view_box ">
+            <div class="view_2">
+                <div class="view_2_tit_box">
+                    <span class="cate">공지</span>
+                    <p class="tit">공지) 엄마아기 서비스가 출시했습니다.</p>
+                </div>
+                <div class="view_2_con_box">
+                    <div class="date">등록일시 : <span>2025.02.04</span></div>
+                    <div class="txt">
+                        엄마아기 서비스가 출시했습니다. <br> 많은 관심 부탁드립니다.
+                    </div>
+                </div>
+                <a href="#n" class="df_btn list">목록으로</a>
+            </div>
         </div>
 
 
@@ -102,9 +115,9 @@
         </div>
         <!-- fix_bot end -->
     </div>
-<!-- nav start -->
+    <!-- nav start -->
     <nav class="float_nav">
-        <a href="#n" class="active">
+        <a href="#n">
             <img src="../../images/mom/nav-img1.png" alt="" class="on">
             <img src="../../images/mom/nav-img1.png" alt="" class="off">
             <span>아기와 <br> 만나기</span>
@@ -124,7 +137,7 @@
             <img src="../../images/mom/nav-img4.png" alt="" class="off">
             <span>튼튼맘 <br> 케어</span>
         </a>
-        <a href="#n">
+        <a href="#n" class="active">
             <img src="../../images/mom/nav-img5-active.png" alt="" class="on">
             <img src="../../images/mom/nav-img5.png" alt="" class="off">
             <span>소통센터</span>
@@ -166,6 +179,9 @@
                     subMenu.slideDown();
                 }
             }
+        });
+        $('.more').click(function(){
+            $(".more_box").toggle();
         })
     </script>
 </body>

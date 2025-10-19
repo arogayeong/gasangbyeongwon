@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- swiper end-->
-    <title>6 산모 아기와만나기 - 임산부 기본 정보 1</title>
+    <title>10 산모 소통센터 3</title>
 </head>
 
 <body>
@@ -86,12 +86,33 @@
         </div>
         <!-- header end -->
         <!-- content start -->
-        <div class="sub_top_bn">
-            <span class="title">아기와 만나기</span>
-            <img src="../../images/mom/meet-baby-bg.png" alt="" class="bg ">
-        </div>
-        <div>
-            메뉴 디자인 논의.. 
+
+        <div class="sub_con_wrap">
+            <div class="sub_con_hd">
+                <button type="button" id="back_btn"><img src="../../images/common/hd_back_arrow.png" alt=""></button>
+                <span class="title">1:1 문의하기</span>
+            </div>
+            <div class="sub_con">
+                <div class="form_box list_write">
+                    <form action="">
+                        <div class="input_box ">
+                            <label class="required">
+                                <p class="input_tit">제목</p>
+                                <input type="text" class="df_input" placeholder="제목을 입력하세요" required>
+                            </label>
+                        </div>
+                        <div class="input_box">
+                            <label class="required">
+                                <p class="input_tit">내용</p>
+                                <textarea name="" class="df_textarea"></textarea>
+                            </label>
+                            <p class="info_txt light">* 문의내용은 마이페이지에서 확인하실 수 있습니다.</p>
+                        </div>
+                        
+                        <button type="submit" class="submit_btn">문의 하기</button>
+                    </form>
+                </div>
+            </div>
         </div>
 
 
@@ -102,35 +123,7 @@
         </div>
         <!-- fix_bot end -->
     </div>
-<!-- nav start -->
-    <nav class="float_nav">
-        <a href="#n" class="active">
-            <img src="../../images/mom/nav-img1.png" alt="" class="on">
-            <img src="../../images/mom/nav-img1.png" alt="" class="off">
-            <span>아기와 <br> 만나기</span>
-        </a>
-        <a href="#n">
-            <img src="../../images/mom/nav-img2-active.png" alt="" class="on">
-            <img src="../../images/mom/nav-img2.png" alt="" class="off">
-            <span>정부 <br> 지원사업</span>
-        </a>
-        <a href="#n">
-            <img src="../../images/mom/nav-img3-active.png" alt="" class="on">
-            <img src="../../images/mom/nav-img3.png" alt="" class="off">
-            <span>엄마아기 <br> TV</span>
-        </a>
-        <a href="#n">
-            <img src="../../images/mom/nav-img4-active.png" alt="" class="on">
-            <img src="../../images/mom/nav-img4.png" alt="" class="off">
-            <span>튼튼맘 <br> 케어</span>
-        </a>
-        <a href="#n">
-            <img src="../../images/mom/nav-img5-active.png" alt="" class="on">
-            <img src="../../images/mom/nav-img5.png" alt="" class="off">
-            <span>소통센터</span>
-        </a>
-    </nav>
-    <!-- nav end -->
+
     <script>
         // swiper script
         var swiper = new Swiper("#tv_list", {
@@ -166,6 +159,9 @@
                     subMenu.slideDown();
                 }
             }
+        });
+        $('.more').click(function () {
+            $(".more_box").toggle();
         })
     </script>
 </body>
