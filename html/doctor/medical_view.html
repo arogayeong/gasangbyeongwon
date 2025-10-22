@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/default.css">
-    <link rel="stylesheet" href="../../css/m_style.css">
+    <link rel="stylesheet" href="../../css/d_style.css">
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- swiper end-->
-    <title>4 산모 마이페이지 6</title>
+    <title>6 의료진 의료전문컨텐츠 2</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <!-- header start -->
         <header id="hd">
             <a href="#n" id="logo">
-                <img src="../../images/mom/logo.png">
+                <img src="../../images/doctor/logo.png">
             </a>
             <button type="button" id="m_menu">
                 <i></i>
@@ -30,52 +30,39 @@
                 <i></i>
             </button>
         </header>
-        <div id="m_menu" class="m_menu_layer ">
+        <div id="m_menu" class="m_menu_layer " >
             <div class="m_menu_bg"></div>
             <div class="m_menu_div">
                 <div class="m_menu_hd">
-                    <button type="button" class="m_menu_close"><img src="../../images/common/menu_close.png"
-                            alt=""></button>
+                    <button type="button" class="m_menu_close"><img src="../../images/common/menu_close.png" alt=""></button>
 
                     <div class="u_name_box">
-                        <span class="name">김산모</span>님 [<span class="info">10</span>주차]
+                        <span class="name">박의사</span>님 [<span class="info">Doctor Park</span>]
                     </div>
-                    <a href="#n" class="my_page_btn">마이페이지</a>
+                    <a href="#n" class="book_mark_btn"><img src="../../images/common/bookmark.png" alt="">북마크</a>
+                    <a href="#n" class="my_page_btn"><img src="../../images/common/u-ico-line.png" alt="">마이페이지</a>
                 </div>
                 <div class="m_menu_con">
-
+                   
                     <div class="m_menu_list">
                         <ul>
                             <li>
-                                <a href="#n" class="menu_tit">아기와 만나기</a>
-                                <ul class="sub_menu">
-                                    <li><a href="#n">임산부 기본 정보</a></li>
-                                    <li><a href="#n">임산부 시기별 정보</a></li>
-                                    <li><a href="#n">분만방법</a></li>
-                                    <li><a href="#n">출산이후</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#n" class="menu_tit">정부지원사업</a>
-                            </li>
-                            <li>
-                                <a href="#n" class="menu_tit">엄마아기TV</a>
-                            </li>
-                            <li>
-                                <a href="#n" class="menu_tit">튼튼맘케어</a>
+                                <a href="#n" class="menu_tit">의료전문 컨텐츠</a>
                             </li>
                             <li>
                                 <a href="#n" class="menu_tit">소통센터</a>
-                                <ul class="sub_menu">
+                                <ul class="sub_menu" >
                                     <li><a href="#n">공지사항</a></li>
                                     <li><a href="#n">1:1 문의하기</a></li>
                                     <li><a href="#n">커뮤니티</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#n" class="menu_tit">병원체험</a>
+                                <a href="#n" class="menu_tit">AI의료교육</a>
                             </li>
-
+                            <li>
+                                <a href="#n" class="menu_tit">VR 의료술기</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="m_menu_ft">
@@ -87,37 +74,62 @@
         <!-- header end -->
         <!-- content start -->
         <div class="sub_top_bn">
-            <span class="title">소통센터</span>
-            <img src="../../images/mom/community-bn-bg.png" alt="" class="bg ">
-        </div>
-        <div class="sub_con_hd">
-            <button type="button" id="back_btn"><img src="../../images/common/hd_back_arrow.png" alt=""></button>
-            <span class="title">커뮤니티</span>
+            <span class="title">의료전문콘텐츠</span>
+            <img src="../../images/doctor/medi-bn-bg.png" alt="" class="bg ">
         </div>
         <div class="view_box ">
             <div class="view_1">
                 <div class="view_1_top">
                     <div class="tit">
-                        <p>만나서 반가워요~ 앞으로 잘 부탁드려요~~</p>
-                        <button type="button" class="more">
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                        </button>
-                        <div class="more_box">
-                            <button type="button">수정</button>
-                            <button type="button">삭제</button>
+                        <p>분만 전체과정 안내</p>
+                        <div class="view_1_top_btns">
+                            <button type="button" class="link active">
+                                <img src="../../images/doctor/link-ico.png" alt="">
+                            </button>
+                            <button type="button" class="bookmark">
+                                <img src="../../images/doctor/bookmark-ico.png" alt="">
+                            </button>
+
+                            <!-- link_modal start -->
+                            <div class="link_modal">
+                                <div class="top">
+                                    <span>링크공유</span>
+                                    <button type="button">
+                                        <img src="../../images/common/modal_close.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="link_txt_box">
+                                    https://seoul.eumc.ac.kr/guide/reservationInfo.do
+                                </div>
+                                <button type="button" class="link_copy_btn">URL 복사</button>
+                            </div>
+                            <!-- link_modal end-->
                         </div>
                     </div>
-
                     <div class="view_1_top_in">
-                        <span class="user">박산모</span>
+                        <span class="user">박의사</span>
                         <span class="date">등록일시: 2025.02.06</span>
                     </div>
                 </div>
                 <div class="view_1_con">
-                    <div class="view_txt">만나서 반가워요~
-                        앞으로 잘 부탁드려요</div>
+                    <div class="view_txt editor">
+                        출처: 대한 산모협회 
+                        <br>
+                        https://www.ksong.org <br><br>  
+                        <img src="../../images/doctor/editor-img1.png" alt="" >
+                        <br>
+                        <img src="../../images/doctor/editor-img2.png" alt="">
+                        <br>
+                        <br>
+                        조기분만의 경우 6개월부터 10개월 사이에 일어날 수 있으며, 해당 분만 과정에서 일어나는 모든 과정을 미리 이해하는 것은 산모와 가족 모두에게 중요한 준비가 됩니다. 
+                        <br>
+                        조기진통이 시작되면 병원에서는 자궁경부의 개대 여부, 태아의 심박수, 자궁 수축의 강도 등을 지속적으로 모니터링하며, 필요 시 자궁수축억제제나 폐성숙을 돕는 스테로이드 주사 등의 치료가 시행됩니다.
+                        <br>
+                        분만이 진행되는 동안에는 태아의 상태에 따라 자연분만 또는 제왕절개 여부가 결정되며, 특히 조산일 경우 신생아 집중치료실(NICU)의 지원이 필요한 경우도 있습니다.  <br>
+                        이후 산모는 회복실로 이동해 출혈, 자궁 수축 상태 등을 모니터링하며 회복 과정을 거치고, 신생아는 필요에 따라 호흡 지원, 체온 유지, 감염 관리 등의 초기 처치를 받게 됩니다. <br>
+                        정상 분만이든 조기 분만이든, 전 과정에 대한 이해와 적절한 대처는 산모의 안전과 태아의 건강을 지키는 데 중요한 역할을 합니다.
+                    </div>
+                    <button type="button" class="view_1_con_btn active"><img src="../../images/common/bookmark.png" alt=""><span>스크랩</span></button>
                 </div>
                 <div class="view_comm_box">
                     <div class="wirte_input">
@@ -129,7 +141,7 @@
                         <li>
                             <div class="comm_ori">
                                 <div class="u_box">
-                                    <span class="user">박산모</span>
+                                    <span class="user">이의사</span>
                                     <span class="date">
                                         <img src="../../images/common/time-ico.png" alt="">
                                         <b>2025.02.06 04:00:12</b>
@@ -152,7 +164,7 @@
                         <li>
                             <div class="comm_ori">
                                 <div class="u_box">
-                                    <span class="user">강산모</span>
+                                    <span class="user">박의사</span>
                                     <span class="date">
                                         <img src="../../images/common/time-ico.png" alt="">
                                         <b>2025.02.06 04:00:12</b>
@@ -169,7 +181,7 @@
                                         <button type="button">답글</button>
                                     </div>
                                 </div>
-                                <div class="comment">안녕하세요~</div>
+                                <div class="comment">환영합니다! 처음엔 낯설어도 하나씩 보다 보면 은근히 익숙해지고, 나중엔 케이스 회의하듯 댓글 달게 되더라고요 ㅎ좋은 정보 같이 나눠요~~</div>
                                 
                                 <div class="reply_box">
                                     <!-- 답변하기 클릭 시 노출 -->
@@ -180,7 +192,7 @@
                                     <ul>
                                         <li>
                                             <div class="u_box">
-                                                <span class="user">박산모</span>
+                                                <span class="user">이의사</span>
                                                 <span class="date">
                                                     <img src="../../images/common/time-ico.png" alt="">
                                                     <b>2025.02.06 04:00:12</b>
@@ -238,39 +250,34 @@
         <!-- content end -->
         <!-- fix_bot start -->
         <div class="fix_bot">
-            <button type="button"><img src="../../images/mom/my-helper-img.png" alt=""></button>
+            <button type="button"><img src="../../images/doctor/my-helper-img.png" alt=""></button>
         </div>
         <!-- fix_bot end -->
     </div>
         <!-- nav start -->
-    <nav class="float_nav">
-        <a href="#n">
-            <img src="../../images/mom/nav-img1.png" alt="" class="on">
-            <img src="../../images/mom/nav-img1.png" alt="" class="off">
-            <span>아기와 <br> 만나기</span>
-        </a>
-        <a href="#n">
-            <img src="../../images/mom/nav-img2-active.png" alt="" class="on">
-            <img src="../../images/mom/nav-img2.png" alt="" class="off">
-            <span>정부 <br> 지원사업</span>
-        </a>
-        <a href="#n">
-            <img src="../../images/mom/nav-img3-active.png" alt="" class="on">
-            <img src="../../images/mom/nav-img3.png" alt="" class="off">
-            <span>엄마아기 <br> TV</span>
-        </a>
-        <a href="#n">
-            <img src="../../images/mom/nav-img4-active.png" alt="" class="on">
-            <img src="../../images/mom/nav-img4.png" alt="" class="off">
-            <span>튼튼맘 <br> 케어</span>
-        </a>
-        <a href="#n" class="active">
-            <img src="../../images/mom/nav-img5-active.png" alt="" class="on">
-            <img src="../../images/mom/nav-img5.png" alt="" class="off">
-            <span>소통센터</span>
-        </a>
-    </nav>
-    <!-- nav end -->
+        <nav class="float_nav">
+            <a href="#n" class="active">
+                <img src="../../images/doctor/nav-img1-active.png" alt="" class="on">
+                <img src="../../images/doctor/nav-img1.png" alt="" class="off">
+                <span>의료전문 <br> 컨텐츠</span>
+            </a>
+            <a href="#n">
+                <img src="../../images/doctor/nav-img2-active.png" alt="" class="on">
+                <img src="../../images/doctor/nav-img2.png" alt="" class="off">
+                <span>소통게시판</span>
+            </a>
+            <a href="#n">
+                <img src="../../images/doctor/nav-img3-active.png" alt="" class="on">
+                <img src="../../images/doctor/nav-img3.png" alt="" class="off">
+                <span>AI 의료교육</span>
+            </a>
+            <a href="#n">
+                <img src="../../images/doctor/nav-img4-active.png" alt="" class="on">
+                <img src="../../images/doctor/nav-img4.png" alt="" class="off">
+                <span>VR 의료술기</span>
+            </a>
+        </nav>
+        <!-- nav end -->
 
     <script>
         // swiper script

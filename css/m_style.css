@@ -1,12 +1,28 @@
+:root{
+    /* 산모 */
+    --m-main-c : #FF7A9D;
+    --m-c-01 : #FF7A9D;
+    --m-c-02 : #B51254;
+    --m-c-03 : #FFEEF3;
+    --m-c-04 : #FB5466;
+}
+
 /* common start */
 
 .submit_btn{
     background-color: var(--df-green-c);
 }
-.form_box .input_box:has(input:focus) .input_tit{
+.form_box .input_box:has(input:not(:read-only):focus) .input_tit{
     color: var(--m-main-c);
 }
-.form_box .input_box input:focus{
+.form_box .input_box input:not(:read-only):focus{
+    outline: var(--m-main-c);
+    border-color: var(--m-main-c);;
+}
+.form_box .input_box:has(textarea:not(:read-only):focus) .input_tit{
+    color: var(--m-main-c);
+}
+.form_box .input_box textarea:not(:read-only):focus{
     outline: var(--m-main-c);
     border-color: var(--m-main-c);;
 }
@@ -59,38 +75,20 @@
     color:var(--m-c-02);
     border-color: var(--m-main-c);
 }
+.fix_bot .write_btn{
+    background-color: var(--m-main-c);
+}
+#main_bn {
+    background-color: var(--m-c-03);
+}
 
+#main_bn .title span {
+    background-color: var(--m-main-c);
+}
 /* common end */
 
 /* main start */
-#main_bn {
-    background-color: var(--m-c-03);
-    padding-top: 60px;
-}
 
-#main_bn .title {
-    position: relative;
-}
-#main_bn .title img{
-    position: absolute;
-    top: 0;
-    
-    left: 50%;
-    transform: translate(-50%,calc(-100% + 7px));
-}
-#main_bn .title span {
-    font-family: 'jn';
-    font-size: 22px;
-    color: #fff;
-    background-color: var(--m-main-c);
-    border-radius: 20px 20px 0 0;
-    height: 52px;
-    width: 222px;
-    line-height: 52px;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-}
 
 #main_bn .main_bn_links {
     border-top: 1px solid var(--m-main-c);
@@ -150,7 +148,8 @@
     overflow: hidden;
 }
 #tv_list .swiper-slide {
-    width: 40%;
+    width: 80%;
+    overflow: hidden;
 }
 /* sec_2 end */
 
@@ -159,30 +158,7 @@
     background-color: #EFF9FF;
     padding-bottom: 100px;
 }
-#sec_4 .hos_bn{
-    box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 0;
-}
-#sec_4 .hos_bn img{
-    width: 100%;
-}
-#sec_4 .hos_box a{
-    display: block;
-    border-radius: 5px;
-    background-color: var(--df-green-c );
-    width:100%;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px 0;
-    font-family: 'jn';
-    color: #fff;
-    margin-top: 10px
-}
+
 /* sec_3 end */
 
 
@@ -191,7 +167,11 @@
     background-color: var(--m-c-03);
     color: var(--m-main-c);
 }
-
+.login_box input:focus{
+    outline: var(--m-main-c);
+    border-color: var(--m-main-c);;
+    border-width: 2px;
+}
 /* .login page end */
 
 .sub_top_bn .my_bg{
